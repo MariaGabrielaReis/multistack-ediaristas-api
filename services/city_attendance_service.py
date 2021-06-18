@@ -8,15 +8,12 @@ def to_list_housekeepers_city(cep):
     # pega o código do IBGE daquele CEP
     codigo_ibge = get_city_cep(cep)['ibge']
 
-    print(codigo_ibge)
-    # busca todas as diaristas cadastradas com aquele código
-    # housekeepers = Housekeeper.objects.filter(codigo_ibge=codigo_ibge).order_by('id')
-    # return housekeepers
     try:
+        # busca todas as diaristas cadastradas com aquele código
         housekeepers = Housekeeper.objects.filter(codigo_ibge=codigo_ibge).order_by('id')
-        print(housekeepers)
         return housekeepers
     except housekeepers.DoesNotExist:
+        # se não tiver diaristas cadastradas com aquele código, devolve array vazio
         return []
 
 
