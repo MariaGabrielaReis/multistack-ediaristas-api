@@ -37,17 +37,25 @@ As seguintes tecnologias e ferramentas foram utilizadas neste projeto:
 <span id="rotas">
   
 ### 🛤️ Rotas
-#### GET
--  http://127.0.0.1:8000/api/city-housekeepers?cep= (retorna as diaristas disponíveis na região do CEP pesquisado)
+-  GET: http://127.0.0.1:8000/api/city-housekeepers?cep= (retorna as diaristas disponíveis na região do CEP pesquisado)
 
 <span id="requisitos">
 
 ### :gear: Como rodar
 
-Para utilizar a API, o [Painel Administrativo](https://github.com/MariaGabrielaReis/multistack-ediaristas-painel-administrativo) e a 
-[Aplicação Web](https://github.com/MariaGabrielaReis/multistack-ediaristas-web), baixe e rode [este repositório](https://github.com/MariaGabrielaReis/multistack-ediaristas-workshop) 
-segundo o passo a passo descrito nele.
-
+Para utilizar a API, é preciso abrir o projeto junto com o [Painel Administrativo](https://github.com/MariaGabrielaReis/multistack-ediaristas-painel-administrativo) no Pycharm, já que pelo Django é possível construir várias aplicações em um mesmo ambiente. Depois de baixar o [Python](https://www.python.org/downloads/) e organizar as pastas da maneira abaixo, rode `pip install -r requirements.txt`, `python manage.py makemigrations`, `python manage.py migrate` e `python manage.py runserver` respectivamente no terminal para iniciar a aplicação administrativa e a API. 
+  
+```bash
+📂 E-diaristas
+|- 📁 .idea
+|- 📁 ediaristas
+|--- 📁 api
+|--- 📁 ediaristas_workshop
+|--- 📁 painel_administrativo
+|--- 📄 manage.py
+|--- 📄 requirements.txt
+```
+  
 <span id="licenca">
 
 ### :page_with_curl: Licença
